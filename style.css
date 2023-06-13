@@ -1,0 +1,266 @@
+body {
+  background-color: #000 !important;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.space-btn {
+  position: relative;
+  font-family: "Electrolize", sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  line-height: 1;
+  color: #fff !important;
+  margin: 0;
+  padding: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: #000 !important;
+}
+
+.space-btn:hover {
+  color: #33ff33; /* replace with your desired color */
+}
+
+.space-btn:focus {
+  color: #19ff19; /* replace with your desired color */
+  outline: none;
+}
+
+.space-btn:active {
+  color: #00ff00; /* replace with your desired color */
+}
+
+.space-btn:before,
+.space-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+}
+
+.space-btn:before {
+  top: 0;
+  left: 0;
+  box-shadow: inset 1px 1px 0 0 #00ff00; /* replace with your desired color */
+}
+
+.space-btn:after {
+  right: 0;
+  bottom: 0;
+  box-shadow: inset -1px -1px 0 0 #00ff00; /* replace with your desired color */
+}
+
+.space-btn:hover:before {
+  animation: hoverShadowBefore 1s forwards;
+}
+
+.space-btn:hover:after {
+  animation: hoverShadowAfter 1s forwards;
+}
+
+@keyframes hoverShadowBefore {
+  0% {
+    width: 100%;
+    height: 1px;
+
+    top: 0;
+    left: 0;
+  }
+  33% {
+    width: 1px;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+  }
+  66% {
+    width: 1px;
+    height: 1px;
+
+    top: calc(100% - 1px);
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    height: 1px;
+
+    top: calc(100% - 1px);
+    left: 0;
+  }
+}
+
+@keyframes hoverShadowAfter {
+  0% {
+    width: 100%;
+    height: 1px;
+  }
+  33% {
+    width: 1px;
+    height: 100%;
+
+    bottom: 0;
+    right: 0;
+  }
+  66% {
+    width: 1px;
+    height: 1px;
+
+    bottom: calc(100% - 1px);
+    right: 0;
+  }
+  100% {
+    width: 100%;
+    height: 1px;
+
+    bottom: calc(100% - 1px);
+    right: 0;
+  }
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5rem;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* modal */
+
+.modal-content {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .modal-content {
+    font-size: 14px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  color: #fff;
+}
+
+#typing-text::after {
+  content: "|";
+  display: inline-block;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#portfolio-description {
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* icones */
+
+.social-links {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: "Titillium Web", sans-serif;
+  color: #fff !;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background: #000;
+  margin: 5px;
+  transition: 1s;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 1s;
+  text-align: center;
+}
+
+.social-btn:hover {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: max-content;
+}
+
+#twitter svg {
+  fill: #00ff00;
+}
+
+#linkedin svg {
+  fill: rgb(89, 89, 255);
+}
+
+#github {
+  fill: #70a1d6;
+}
+
+.bw {
+  filter: grayscale(500%);
+}
+
+@media (max-width: 767px) {
+  .image-container img {
+    display: none;
+  }
+}
